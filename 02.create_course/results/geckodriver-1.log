@@ -1,0 +1,17 @@
+1707266698138	geckodriver	INFO	Listening on 127.0.0.1:45631
+1707266698144	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... te" "--remote-debugging-port" "50153" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilelwZGLs"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1707266698566	Marionette	INFO	Marionette enabled
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1707266698655	Marionette	INFO	Listening on port 43801
+WebDriver BiDi listening on ws://127.0.0.1:50153
+Read port: 43801
+1707266698812	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: ({})
+DevTools listening on ws://127.0.0.1:50153/devtools/browser/fb465977-bcad-4d59-b67e-9ed26edd47a4
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://sandbox.moodledemo.net."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://sandbox.moodledemo.net."
+JavaScript error: resource://gre/modules/XULStore.sys.mjs, line 60: Error: Can't find profile directory.
+1707266724446	Marionette	INFO	Stopped listening on port 43801

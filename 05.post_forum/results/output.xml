@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.8.10 on linux)" generated="2024-02-06T21:55:26.964846" rpa="false" schemaversion="5">
+<suite id="s1" name="02.AnswerForumBDD" source="/home/analuiza891/Documents/desafio_revvo/05.post_forum/testes/02.AnswerForumBDD.robot">
+<kw name="Open the browser" owner="02.ResourceBDD" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:55:27.031392" level="INFO">Opening browser 'firefox' to base url 'https://sandbox.moodledemo.net/login/index.php'.</msg>
+<arg>${URL_MOODLE}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-02-06T21:55:27.031165" elapsed="7.368030"/>
+</kw>
+<status status="PASS" start="2024-02-06T21:55:27.030702" elapsed="7.369011"/>
+</kw>
+<test id="s1-t1" name="Scenario 01: Reply a discussion in a forum" line="7">
+<kw name="Given I am on the initial page in Moodle Sandbox" owner="02.ResourceBDD">
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-02-06T21:55:34.402014" elapsed="0.271552"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:55:34.675601" level="INFO">Typing text 'teacher' into text field 'xpath=//input[@id='username']'.</msg>
+<arg>${USERNAME}</arg>
+<arg>teacher</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:55:34.674245" elapsed="0.084632"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-06T21:55:35.760162" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-06T21:55:34.759475" elapsed="1.000885"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:55:35.761444" level="INFO">Sending key(s) ('TAB',) to xpath=//input[@id='username'] element.</msg>
+<msg time="2024-02-06T21:55:36.035252" level="INFO">Pressing special key TAB to element.</msg>
+<msg time="2024-02-06T21:55:36.035365" level="INFO">Releasing special key TAB.</msg>
+<arg>${USERNAME}</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-02-06T21:55:35.760734" elapsed="0.285885"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-06T21:55:37.047412" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-06T21:55:36.046922" elapsed="1.000720"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:55:37.048266" level="INFO">Typing text 'sandbox' into text field 'xpath=//input[@id='password']'.</msg>
+<arg>${PASSWORD}</arg>
+<arg>sandbox</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:55:37.047979" elapsed="0.019215"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-06T21:55:38.067790" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-06T21:55:37.067499" elapsed="1.000438"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:55:38.068469" level="INFO">Clicking button 'xpath=//button[@id='loginbtn']'.</msg>
+<arg>${LOGIN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:55:38.068185" elapsed="1.642264"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-06T21:55:40.711377" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-06T21:55:39.710934" elapsed="1.000693"/>
+</kw>
+<status status="PASS" start="2024-02-06T21:55:34.401526" elapsed="6.310314"/>
+</kw>
+<kw name="When the section &quot;My courses&quot; is accessed" owner="02.ResourceBDD">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:55:40.712933" level="INFO">Clicking element 'xpath=//a[@role='menuitem'][normalize-space()='My courses']'.</msg>
+<arg>${MY_COURSE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:55:40.712705" elapsed="0.478531"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-06T21:55:44.192007" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-06T21:55:41.191542" elapsed="3.000641"/>
+</kw>
+<status status="PASS" start="2024-02-06T21:55:40.712322" elapsed="3.480042"/>
+</kw>
+<kw name="And the existing course page is accessed" owner="02.ResourceBDD">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:55:44.193636" level="INFO">Clicking element 'xpath=//span[@aria-hidden='true'][normalize-space()='My first course']'.</msg>
+<arg>${COURSE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:55:44.193351" elapsed="1.177368"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-06T21:55:47.371313" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-06T21:55:45.370966" elapsed="2.000502"/>
+</kw>
+<status status="PASS" start="2024-02-06T21:55:44.192925" elapsed="3.178673"/>
+</kw>
+<kw name="And the forum post page is accessed" owner="02.ResourceBDD">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:55:47.372800" level="INFO">Clicking element 'xpath=//a[contains(@class,' aalink stretched-link')]'.</msg>
+<arg>${NEWS_FORUM}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:55:47.372469" elapsed="1.072985"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-06T21:55:49.446323" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-06T21:55:48.445726" elapsed="1.000959"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:55:49.447600" level="INFO">Clicking element 'xpath=//a[normalize-space()='New forum']'.</msg>
+<arg>${POST}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:55:49.447056" elapsed="1.127225"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-06T21:55:52.575019" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-06T21:55:50.574577" elapsed="2.000730"/>
+</kw>
+<status status="PASS" start="2024-02-06T21:55:47.372127" elapsed="5.203470"/>
+</kw>
+<kw name="And a reply is add to the forum post" owner="02.ResourceBDD">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:55:52.577264" level="INFO">Clicking element 'xpath=//a[normalize-space()='Reply']'.</msg>
+<arg>${REPLY}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:55:52.576849" elapsed="0.243316"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-06T21:55:54.821086" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-06T21:55:52.820540" elapsed="2.000687"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:55:54.821747" level="INFO">Clicking element 'xpath=/html/body/div[2]/div[4]/div/div[3]/div/section/div[2]/div/article/div[1]/div/div[2]/div/form/div[1]/span/textarea'.</msg>
+<arg>${MESSAGE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:55:54.821463" elapsed="0.212437"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:55:55.034389" level="INFO">Typing text 'Nova resposta no fórum.' into text field 'xpath=/html/body/div[2]/div[4]/div/div[3]/div/section/div[2]/div/article/div[1]/div/div[2]/div/form/div[1]/span/textarea'.</msg>
+<arg>${MESSAGE}</arg>
+<arg>Nova resposta no fórum.</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:55:55.034134" elapsed="0.019127"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-06T21:55:57.053876" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-06T21:55:55.053515" elapsed="2.000509"/>
+</kw>
+<status status="PASS" start="2024-02-06T21:55:52.576256" elapsed="4.477912"/>
+</kw>
+<kw name="Then the new comment on topic will be add successfully" owner="02.ResourceBDD">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:55:57.055084" level="INFO">Clicking element 'xpath=//span[@data-region='submit-text']'.</msg>
+<arg>${POST_FORUM}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:55:57.054870" elapsed="0.232203"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-06T21:56:00.287668" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-06T21:55:57.287330" elapsed="3.000514"/>
+</kw>
+<status status="PASS" start="2024-02-06T21:55:57.054543" elapsed="3.233482"/>
+</kw>
+<doc>Accessing the initial Moodle Sandbox page,
+go to the section "My courses",
+click in the course,
+click a discussion in a forum,
+reply with a message in the discussion
+and the new comment on topic will be add successfully.</doc>
+<tag>forum</tag>
+<status status="PASS" start="2024-02-06T21:55:34.400017" elapsed="25.888323"/>
+</test>
+<kw name="Close the browser" owner="02.ResourceBDD" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-02-06T21:56:00.289699" elapsed="0.553205"/>
+</kw>
+<status status="PASS" start="2024-02-06T21:56:00.289318" elapsed="0.553776"/>
+</kw>
+<status status="PASS" start="2024-02-06T21:55:26.965410" elapsed="33.877732"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">forum</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="02.AnswerForumBDD">02.AnswerForumBDD</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

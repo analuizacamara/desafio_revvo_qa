@@ -1,0 +1,1121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.8.10 on linux)" generated="2024-02-06T21:47:28.035082" rpa="false" schemaversion="5">
+<suite id="s1" name="Testes" source="/home/analuiza891/Documents/desafio_revvo/03.crate_data/testes">
+<suite id="s1-s1" name="01.CreateStudentsBDD" source="/home/analuiza891/Documents/desafio_revvo/03.crate_data/testes/01.CreateStudentsBDD.robot">
+<kw name="Open the browser" owner="01.ResourceBDD" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:47:28.109806" level="INFO">Opening browser 'firefox' to base url 'https://sandbox.moodledemo.net/login/index.php'.</msg>
+<arg>${URL_MOODLE}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-02-06T21:47:28.109604" elapsed="5.679671"/>
+</kw>
+<status status="PASS" start="2024-02-06T21:47:28.109080" elapsed="5.680692"/>
+</kw>
+<test id="s1-s1-t1" name="Scenario 01: Create 10 students on Moodle Sandbox" line="7">
+<kw name="Given I am on the initial page in Moodle Sandbox" owner="01.ResourceBDD">
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-02-06T21:47:33.792597" elapsed="0.285261"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:47:34.079486" level="INFO">Typing text 'manager' into text field 'xpath=//input[@id='username']'.</msg>
+<arg>${USERNAME}</arg>
+<arg>manager</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:47:34.078674" elapsed="0.074786"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-06T21:47:35.154942" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-06T21:47:34.154177" elapsed="1.000962"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:47:35.156433" level="INFO">Sending key(s) ('TAB',) to xpath=//input[@id='username'] element.</msg>
+<msg time="2024-02-06T21:47:35.431628" level="INFO">Pressing special key TAB to element.</msg>
+<msg time="2024-02-06T21:47:35.431794" level="INFO">Releasing special key TAB.</msg>
+<arg>${USERNAME}</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-02-06T21:47:35.155594" elapsed="0.291829"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-06T21:47:36.448403" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-06T21:47:35.447816" elapsed="1.000749"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:47:36.449238" level="INFO">Typing text 'sandbox' into text field 'xpath=//input[@id='password']'.</msg>
+<arg>${PASSWORD}</arg>
+<arg>sandbox</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:47:36.448866" elapsed="0.017210"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-06T21:47:37.466795" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-06T21:47:36.466408" elapsed="1.000537"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:47:37.467523" level="INFO">Clicking button 'xpath=//button[@id='loginbtn']'.</msg>
+<arg>${LOGIN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:47:37.467204" elapsed="1.321200"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-06T21:47:39.789306" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-06T21:47:38.788812" elapsed="1.000663"/>
+</kw>
+<status status="PASS" start="2024-02-06T21:47:33.791936" elapsed="5.997693"/>
+</kw>
+<kw name="When the section &quot;Site administration&quot; were accessed" owner="01.ResourceBDD">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:47:39.790743" level="INFO">Clicking element 'xpath=//a[contains(@role,'menuitem')][normalize-space()='Site administration']'.</msg>
+<arg>${SITE_ADM}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:47:39.790511" elapsed="0.512772"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-06T21:47:41.304360" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-06T21:47:40.303695" elapsed="1.000835"/>
+</kw>
+<status status="PASS" start="2024-02-06T21:47:39.790096" elapsed="1.514594"/>
+</kw>
+<kw name="And the section &quot;Users&quot; were accessed" owner="01.ResourceBDD">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:47:41.306018" level="INFO">Clicking element 'xpath=//a[normalize-space()='Users']'.</msg>
+<arg>${USERS}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:47:41.305612" elapsed="0.240094"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-06T21:47:42.546413" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-06T21:47:41.545957" elapsed="1.000672"/>
+</kw>
+<status status="PASS" start="2024-02-06T21:47:41.305092" elapsed="1.241749"/>
+</kw>
+<kw name="And the create new user page were accessed" owner="01.ResourceBDD">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:47:42.548346" level="INFO">Clicking element 'xpath=//a[normalize-space()='Add a new user']'.</msg>
+<arg>${NEW_USER}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:47:42.547966" elapsed="0.924984"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-06T21:47:44.473715" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-06T21:47:43.473222" elapsed="1.000660"/>
+</kw>
+<status status="PASS" start="2024-02-06T21:47:42.547416" elapsed="1.926636"/>
+</kw>
+<kw name="And all the required fields were filled in" owner="01.ResourceBDD">
+<for flavor="IN RANGE">
+<iter>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-06T21:47:45.475815" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-06T21:47:44.475474" elapsed="1.000546"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:47:45.476953" level="INFO">Typing text 'estudante1' into text field 'xpath=//input[@id='id_username']'.</msg>
+<arg>${NEW_USERNAME}</arg>
+<arg>estudante${i}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:47:45.476400" elapsed="0.140372"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:47:45.617252" level="INFO">Clicking element 'xpath=/html/body/div[3]/div[4]/div/div[3]/div/section/div/form/fieldset[1]/div[2]/div[5]/div[2]/span/a[1]/span/span/em'.</msg>
+<arg>${CLEAR_PASSWORD}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:47:45.616997" elapsed="0.219798"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:47:45.837643" level="INFO">Typing text 'sandbox' into text field 'xpath=//input[@id='id_newpassword']'.</msg>
+<arg>${NEW_PASSWORD}</arg>
+<arg>sandbox</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:47:45.837294" elapsed="0.033117"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:47:45.871309" level="INFO">Typing text 'Estudante' into text field 'xpath=//input[@id='id_firstname']'.</msg>
+<arg>${FIRST_NAME}</arg>
+<arg>Estudante</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:47:45.870818" elapsed="0.058528"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:47:45.930389" level="INFO">Typing text 'Revvo' into text field 'xpath=//input[@id='id_lastname']'.</msg>
+<arg>${LAST_NAME}</arg>
+<arg>Revvo</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:47:45.929903" elapsed="0.031352"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:47:45.962198" level="INFO">Typing text 'revvo011@uorak.com' into text field 'xpath=//input[@id='id_email']'.</msg>
+<arg>${EMAIL}</arg>
+<arg>revvo01${i}@uorak.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:47:45.961684" elapsed="0.032488"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-06T21:47:46.994921" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-06T21:47:45.994507" elapsed="1.000640"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:47:46.996190" level="INFO">Executing JavaScript:
+window.scrollTo(0,2500)
+Without any arguments.</msg>
+<arg>window.scrollTo(0,2500)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-02-06T21:47:46.995572" elapsed="0.010822"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-06T21:47:48.007254" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-06T21:47:47.006797" elapsed="1.000664"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:47:48.008312" level="INFO">Clicking button 'xpath=//input[@id='id_submitbutton']'.</msg>
+<arg>${CREATE_USER}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:47:48.007861" elapsed="1.548519"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-06T21:47:50.557204" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-06T21:47:49.556722" elapsed="1.000709"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:47:50.558433" level="INFO">Clicking button 'xpath=(//button[normalize-space()='Add a new user'])[1]'.</msg>
+<arg>${ADD_NEW_USER}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:47:50.557939" elapsed="0.564844"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-02-06T21:47:51.123408" level="INFO">Created student: Student1</msg>
+<arg>Created student: Student${i}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-02-06T21:47:51.123116" elapsed="0.000355"/>
+</kw>
+<var name="${i}">1</var>
+<status status="PASS" start="2024-02-06T21:47:44.475321" elapsed="6.648212"/>
+</iter>
+<iter>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-06T21:47:52.124437" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-06T21:47:51.123879" elapsed="1.000743"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:47:52.125203" level="INFO">Typing text 'estudante2' into text field 'xpath=//input[@id='id_username']'.</msg>
+<arg>${NEW_USERNAME}</arg>
+<arg>estudante${i}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:47:52.124876" elapsed="0.053639"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:47:52.179439" level="INFO">Clicking element 'xpath=/html/body/div[3]/div[4]/div/div[3]/div/section/div/form/fieldset[1]/div[2]/div[5]/div[2]/span/a[1]/span/span/em'.</msg>
+<arg>${CLEAR_PASSWORD}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:47:52.178960" elapsed="0.239054"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:47:52.418910" level="INFO">Typing text 'sandbox' into text field 'xpath=//input[@id='id_newpassword']'.</msg>
+<arg>${NEW_PASSWORD}</arg>
+<arg>sandbox</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:47:52.418423" elapsed="0.039432"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:47:52.458689" level="INFO">Typing text 'Estudante' into text field 'xpath=//input[@id='id_firstname']'.</msg>
+<arg>${FIRST_NAME}</arg>
+<arg>Estudante</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:47:52.458247" elapsed="0.031226"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:47:52.490064" level="INFO">Typing text 'Revvo' into text field 'xpath=//input[@id='id_lastname']'.</msg>
+<arg>${LAST_NAME}</arg>
+<arg>Revvo</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:47:52.489754" elapsed="0.024225"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:47:52.514651" level="INFO">Typing text 'revvo012@uorak.com' into text field 'xpath=//input[@id='id_email']'.</msg>
+<arg>${EMAIL}</arg>
+<arg>revvo01${i}@uorak.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:47:52.514280" elapsed="0.029972"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-06T21:47:53.545159" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-06T21:47:52.544623" elapsed="1.000675"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:47:53.545914" level="INFO">Executing JavaScript:
+window.scrollTo(0,2500)
+Without any arguments.</msg>
+<arg>window.scrollTo(0,2500)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-02-06T21:47:53.545538" elapsed="0.006829"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-06T21:47:54.553012" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-06T21:47:53.552664" elapsed="1.000530"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:47:54.553919" level="INFO">Clicking button 'xpath=//input[@id='id_submitbutton']'.</msg>
+<arg>${CREATE_USER}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:47:54.553482" elapsed="1.135003"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-06T21:47:56.689109" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-06T21:47:55.688771" elapsed="1.000484"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:47:56.689760" level="INFO">Clicking button 'xpath=(//button[normalize-space()='Add a new user'])[1]'.</msg>
+<arg>${ADD_NEW_USER}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:47:56.689495" elapsed="0.581884"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-02-06T21:47:57.271916" level="INFO">Created student: Student2</msg>
+<arg>Created student: Student${i}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-02-06T21:47:57.271689" elapsed="0.000280"/>
+</kw>
+<var name="${i}">2</var>
+<status status="PASS" start="2024-02-06T21:47:51.123764" elapsed="6.148260"/>
+</iter>
+<iter>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-06T21:47:58.272801" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-06T21:47:57.272339" elapsed="1.000691"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:47:58.273954" level="INFO">Typing text 'estudante3' into text field 'xpath=//input[@id='id_username']'.</msg>
+<arg>${NEW_USERNAME}</arg>
+<arg>estudante${i}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:47:58.273405" elapsed="0.058608"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:47:58.332863" level="INFO">Clicking element 'xpath=/html/body/div[3]/div[4]/div/div[3]/div/section/div/form/fieldset[1]/div[2]/div[5]/div[2]/span/a[1]/span/span/em'.</msg>
+<arg>${CLEAR_PASSWORD}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:47:58.332438" elapsed="0.230132"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:47:58.563425" level="INFO">Typing text 'sandbox' into text field 'xpath=//input[@id='id_newpassword']'.</msg>
+<arg>${NEW_PASSWORD}</arg>
+<arg>sandbox</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:47:58.562957" elapsed="0.025416"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:47:58.588985" level="INFO">Typing text 'Estudante' into text field 'xpath=//input[@id='id_firstname']'.</msg>
+<arg>${FIRST_NAME}</arg>
+<arg>Estudante</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:47:58.588662" elapsed="0.024307"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:47:58.613801" level="INFO">Typing text 'Revvo' into text field 'xpath=//input[@id='id_lastname']'.</msg>
+<arg>${LAST_NAME}</arg>
+<arg>Revvo</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:47:58.613365" elapsed="0.025818"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:47:58.640095" level="INFO">Typing text 'revvo013@uorak.com' into text field 'xpath=//input[@id='id_email']'.</msg>
+<arg>${EMAIL}</arg>
+<arg>revvo01${i}@uorak.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:47:58.639600" elapsed="0.046709"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-06T21:47:59.687152" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-06T21:47:58.686672" elapsed="1.000663"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:47:59.688077" level="INFO">Executing JavaScript:
+window.scrollTo(0,2500)
+Without any arguments.</msg>
+<arg>window.scrollTo(0,2500)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-02-06T21:47:59.687605" elapsed="0.012228"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-06T21:48:00.700469" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-06T21:47:59.700099" elapsed="1.000583"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:48:00.701612" level="INFO">Clicking button 'xpath=//input[@id='id_submitbutton']'.</msg>
+<arg>${CREATE_USER}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:48:00.701097" elapsed="3.095503"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-06T21:48:04.797434" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-06T21:48:03.796920" elapsed="1.000783"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:48:04.798398" level="INFO">Clicking button 'xpath=(//button[normalize-space()='Add a new user'])[1]'.</msg>
+<arg>${ADD_NEW_USER}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:48:04.798094" elapsed="0.522116"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-02-06T21:48:05.320929" level="INFO">Created student: Student3</msg>
+<arg>Created student: Student${i}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-02-06T21:48:05.320549" elapsed="0.000500"/>
+</kw>
+<var name="${i}">3</var>
+<status status="PASS" start="2024-02-06T21:47:57.272225" elapsed="8.048942"/>
+</iter>
+<iter>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-06T21:48:06.322274" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-06T21:48:05.321836" elapsed="1.000582"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:48:06.322982" level="INFO">Typing text 'estudante4' into text field 'xpath=//input[@id='id_username']'.</msg>
+<arg>${NEW_USERNAME}</arg>
+<arg>estudante${i}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:48:06.322660" elapsed="0.082883"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:48:06.406079" level="INFO">Clicking element 'xpath=/html/body/div[3]/div[4]/div/div[3]/div/section/div/form/fieldset[1]/div[2]/div[5]/div[2]/span/a[1]/span/span/em'.</msg>
+<arg>${CLEAR_PASSWORD}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:48:06.405802" elapsed="0.225991"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:48:06.632161" level="INFO">Typing text 'sandbox' into text field 'xpath=//input[@id='id_newpassword']'.</msg>
+<arg>${NEW_PASSWORD}</arg>
+<arg>sandbox</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:48:06.631965" elapsed="0.017391"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:48:06.649807" level="INFO">Typing text 'Estudante' into text field 'xpath=//input[@id='id_firstname']'.</msg>
+<arg>${FIRST_NAME}</arg>
+<arg>Estudante</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:48:06.649566" elapsed="0.022277"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:48:06.672352" level="INFO">Typing text 'Revvo' into text field 'xpath=//input[@id='id_lastname']'.</msg>
+<arg>${LAST_NAME}</arg>
+<arg>Revvo</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:48:06.672100" elapsed="0.021613"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:48:06.694285" level="INFO">Typing text 'revvo014@uorak.com' into text field 'xpath=//input[@id='id_email']'.</msg>
+<arg>${EMAIL}</arg>
+<arg>revvo01${i}@uorak.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:48:06.693952" elapsed="0.028745"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-06T21:48:07.723388" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-06T21:48:06.722943" elapsed="1.000566"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:48:07.724079" level="INFO">Executing JavaScript:
+window.scrollTo(0,2500)
+Without any arguments.</msg>
+<arg>window.scrollTo(0,2500)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-02-06T21:48:07.723723" elapsed="0.006848"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-06T21:48:08.731299" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-06T21:48:07.730916" elapsed="1.000556"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:48:08.732015" level="INFO">Clicking button 'xpath=//input[@id='id_submitbutton']'.</msg>
+<arg>${CREATE_USER}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:48:08.731725" elapsed="1.026532"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-06T21:48:10.759074" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-06T21:48:09.758568" elapsed="1.000866"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:48:10.760095" level="INFO">Clicking button 'xpath=(//button[normalize-space()='Add a new user'])[1]'.</msg>
+<arg>${ADD_NEW_USER}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:48:10.759823" elapsed="0.555758"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-02-06T21:48:11.316189" level="INFO">Created student: Student4</msg>
+<arg>Created student: Student${i}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-02-06T21:48:11.315912" elapsed="0.000352"/>
+</kw>
+<var name="${i}">4</var>
+<status status="PASS" start="2024-02-06T21:48:05.321585" elapsed="5.994760"/>
+</iter>
+<iter>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-06T21:48:12.317109" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-06T21:48:11.316719" elapsed="1.000570"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:48:12.318033" level="INFO">Typing text 'estudante5' into text field 'xpath=//input[@id='id_username']'.</msg>
+<arg>${NEW_USERNAME}</arg>
+<arg>estudante${i}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:48:12.317618" elapsed="0.047814"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:48:12.366264" level="INFO">Clicking element 'xpath=/html/body/div[3]/div[4]/div/div[3]/div/section/div/form/fieldset[1]/div[2]/div[5]/div[2]/span/a[1]/span/span/em'.</msg>
+<arg>${CLEAR_PASSWORD}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:48:12.365922" elapsed="0.224929"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:48:12.591387" level="INFO">Typing text 'sandbox' into text field 'xpath=//input[@id='id_newpassword']'.</msg>
+<arg>${NEW_PASSWORD}</arg>
+<arg>sandbox</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:48:12.591100" elapsed="0.017328"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:48:12.609076" level="INFO">Typing text 'Estudante' into text field 'xpath=//input[@id='id_firstname']'.</msg>
+<arg>${FIRST_NAME}</arg>
+<arg>Estudante</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:48:12.608752" elapsed="0.021599"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:48:12.630976" level="INFO">Typing text 'Revvo' into text field 'xpath=//input[@id='id_lastname']'.</msg>
+<arg>${LAST_NAME}</arg>
+<arg>Revvo</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:48:12.630644" elapsed="0.020220"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:48:12.651608" level="INFO">Typing text 'revvo015@uorak.com' into text field 'xpath=//input[@id='id_email']'.</msg>
+<arg>${EMAIL}</arg>
+<arg>revvo01${i}@uorak.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:48:12.651157" elapsed="0.029069"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-06T21:48:13.680914" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-06T21:48:12.680475" elapsed="1.000580"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:48:13.681666" level="INFO">Executing JavaScript:
+window.scrollTo(0,2500)
+Without any arguments.</msg>
+<arg>window.scrollTo(0,2500)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-02-06T21:48:13.681292" elapsed="0.007814"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-06T21:48:14.689749" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-06T21:48:13.689363" elapsed="1.000774"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:48:14.690763" level="INFO">Clicking button 'xpath=//input[@id='id_submitbutton']'.</msg>
+<arg>${CREATE_USER}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:48:14.690436" elapsed="0.989717"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-06T21:48:16.680851" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-06T21:48:15.680437" elapsed="1.000575"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:48:16.681528" level="INFO">Clicking button 'xpath=(//button[normalize-space()='Add a new user'])[1]'.</msg>
+<arg>${ADD_NEW_USER}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:48:16.681261" elapsed="0.570393"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-02-06T21:48:17.252193" level="INFO">Created student: Student5</msg>
+<arg>Created student: Student${i}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-02-06T21:48:17.251949" elapsed="0.000300"/>
+</kw>
+<var name="${i}">5</var>
+<status status="PASS" start="2024-02-06T21:48:11.316607" elapsed="5.935708"/>
+</iter>
+<iter>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-06T21:48:18.253186" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-06T21:48:17.252831" elapsed="1.000526"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:48:18.253960" level="INFO">Typing text 'estudante6' into text field 'xpath=//input[@id='id_username']'.</msg>
+<arg>${NEW_USERNAME}</arg>
+<arg>estudante${i}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:48:18.253615" elapsed="0.051712"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:48:18.305957" level="INFO">Clicking element 'xpath=/html/body/div[3]/div[4]/div/div[3]/div/section/div/form/fieldset[1]/div[2]/div[5]/div[2]/span/a[1]/span/span/em'.</msg>
+<arg>${CLEAR_PASSWORD}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:48:18.305619" elapsed="0.227250"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:48:18.533675" level="INFO">Typing text 'sandbox' into text field 'xpath=//input[@id='id_newpassword']'.</msg>
+<arg>${NEW_PASSWORD}</arg>
+<arg>sandbox</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:48:18.533209" elapsed="0.025705"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:48:18.559783" level="INFO">Typing text 'Estudante' into text field 'xpath=//input[@id='id_firstname']'.</msg>
+<arg>${FIRST_NAME}</arg>
+<arg>Estudante</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:48:18.559326" elapsed="0.038474"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:48:18.598771" level="INFO">Typing text 'Revvo' into text field 'xpath=//input[@id='id_lastname']'.</msg>
+<arg>${LAST_NAME}</arg>
+<arg>Revvo</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:48:18.598242" elapsed="0.023121"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:48:18.622363" level="INFO">Typing text 'revvo016@uorak.com' into text field 'xpath=//input[@id='id_email']'.</msg>
+<arg>${EMAIL}</arg>
+<arg>revvo01${i}@uorak.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:48:18.621821" elapsed="0.027870"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-06T21:48:19.650574" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-06T21:48:18.650088" elapsed="1.000733"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:48:19.651911" level="INFO">Executing JavaScript:
+window.scrollTo(0,2500)
+Without any arguments.</msg>
+<arg>window.scrollTo(0,2500)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-02-06T21:48:19.651239" elapsed="0.012213"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-06T21:48:20.664332" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-06T21:48:19.663822" elapsed="1.000653"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:48:20.665075" level="INFO">Clicking button 'xpath=//input[@id='id_submitbutton']'.</msg>
+<arg>${CREATE_USER}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:48:20.664731" elapsed="0.929499"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-06T21:48:22.595077" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-06T21:48:21.594538" elapsed="1.000746"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:48:22.595835" level="INFO">Clicking button 'xpath=(//button[normalize-space()='Add a new user'])[1]'.</msg>
+<arg>${ADD_NEW_USER}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:48:22.595564" elapsed="0.602982"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-02-06T21:48:23.199423" level="INFO">Created student: Student6</msg>
+<arg>Created student: Student${i}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-02-06T21:48:23.198979" elapsed="0.000540"/>
+</kw>
+<var name="${i}">6</var>
+<status status="PASS" start="2024-02-06T21:48:17.252676" elapsed="5.946933"/>
+</iter>
+<iter>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-06T21:48:24.200593" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-06T21:48:23.200120" elapsed="1.000716"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:48:24.201963" level="INFO">Typing text 'estudante7' into text field 'xpath=//input[@id='id_username']'.</msg>
+<arg>${NEW_USERNAME}</arg>
+<arg>estudante${i}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:48:24.201302" elapsed="0.058493"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:48:24.260817" level="INFO">Clicking element 'xpath=/html/body/div[3]/div[4]/div/div[3]/div/section/div/form/fieldset[1]/div[2]/div[5]/div[2]/span/a[1]/span/span/em'.</msg>
+<arg>${CLEAR_PASSWORD}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:48:24.260242" elapsed="0.235212"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:48:24.495981" level="INFO">Typing text 'sandbox' into text field 'xpath=//input[@id='id_newpassword']'.</msg>
+<arg>${NEW_PASSWORD}</arg>
+<arg>sandbox</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:48:24.495696" elapsed="0.020901"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:48:24.517591" level="INFO">Typing text 'Estudante' into text field 'xpath=//input[@id='id_firstname']'.</msg>
+<arg>${FIRST_NAME}</arg>
+<arg>Estudante</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:48:24.517123" elapsed="0.026593"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:48:24.544347" level="INFO">Typing text 'Revvo' into text field 'xpath=//input[@id='id_lastname']'.</msg>
+<arg>${LAST_NAME}</arg>
+<arg>Revvo</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:48:24.544011" elapsed="0.023168"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:48:24.568405" level="INFO">Typing text 'revvo017@uorak.com' into text field 'xpath=//input[@id='id_email']'.</msg>
+<arg>${EMAIL}</arg>
+<arg>revvo01${i}@uorak.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:48:24.567751" elapsed="0.028154"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-06T21:48:25.596772" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-06T21:48:24.596290" elapsed="1.000692"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:48:25.598223" level="INFO">Executing JavaScript:
+window.scrollTo(0,2500)
+Without any arguments.</msg>
+<arg>window.scrollTo(0,2500)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-02-06T21:48:25.597351" elapsed="0.009309"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-06T21:48:26.607580" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-06T21:48:25.607053" elapsed="1.000699"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:48:26.608315" level="INFO">Clicking button 'xpath=//input[@id='id_submitbutton']'.</msg>
+<arg>${CREATE_USER}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:48:26.608005" elapsed="0.885735"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-06T21:48:28.494753" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-06T21:48:27.494241" elapsed="1.000642"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:48:28.495637" level="INFO">Clicking button 'xpath=(//button[normalize-space()='Add a new user'])[1]'.</msg>
+<arg>${ADD_NEW_USER}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:48:28.495113" elapsed="0.523769"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-02-06T21:48:29.019767" level="INFO">Created student: Student7</msg>
+<arg>Created student: Student${i}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-02-06T21:48:29.019432" elapsed="0.000416"/>
+</kw>
+<var name="${i}">7</var>
+<status status="PASS" start="2024-02-06T21:48:23.199923" elapsed="5.819991"/>
+</iter>
+<iter>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-06T21:48:30.020794" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-06T21:48:29.020336" elapsed="1.000616"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:48:30.021659" level="INFO">Typing text 'estudante8' into text field 'xpath=//input[@id='id_username']'.</msg>
+<arg>${NEW_USERNAME}</arg>
+<arg>estudante${i}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:48:30.021246" elapsed="0.042440"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:48:30.064386" level="INFO">Clicking element 'xpath=/html/body/div[3]/div[4]/div/div[3]/div/section/div/form/fieldset[1]/div[2]/div[5]/div[2]/span/a[1]/span/span/em'.</msg>
+<arg>${CLEAR_PASSWORD}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:48:30.064045" elapsed="0.221522"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:48:30.285945" level="INFO">Typing text 'sandbox' into text field 'xpath=//input[@id='id_newpassword']'.</msg>
+<arg>${NEW_PASSWORD}</arg>
+<arg>sandbox</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:48:30.285741" elapsed="0.012127"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:48:30.298420" level="INFO">Typing text 'Estudante' into text field 'xpath=//input[@id='id_firstname']'.</msg>
+<arg>${FIRST_NAME}</arg>
+<arg>Estudante</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:48:30.298132" elapsed="0.016437"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:48:30.315260" level="INFO">Typing text 'Revvo' into text field 'xpath=//input[@id='id_lastname']'.</msg>
+<arg>${LAST_NAME}</arg>
+<arg>Revvo</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:48:30.314821" elapsed="0.016838"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:48:30.332268" level="INFO">Typing text 'revvo018@uorak.com' into text field 'xpath=//input[@id='id_email']'.</msg>
+<arg>${EMAIL}</arg>
+<arg>revvo01${i}@uorak.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:48:30.331918" elapsed="0.029666"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-06T21:48:31.362213" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-06T21:48:30.361861" elapsed="1.000492"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:48:31.362968" level="INFO">Executing JavaScript:
+window.scrollTo(0,2500)
+Without any arguments.</msg>
+<arg>window.scrollTo(0,2500)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-02-06T21:48:31.362601" elapsed="0.007782"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-06T21:48:32.370983" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-06T21:48:31.370641" elapsed="1.000466"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:48:32.371604" level="INFO">Clicking button 'xpath=//input[@id='id_submitbutton']'.</msg>
+<arg>${CREATE_USER}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:48:32.371337" elapsed="0.952700"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-06T21:48:34.324825" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-06T21:48:33.324342" elapsed="1.000629"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:48:34.325424" level="INFO">Clicking button 'xpath=(//button[normalize-space()='Add a new user'])[1]'.</msg>
+<arg>${ADD_NEW_USER}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:48:34.325199" elapsed="0.686892"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-02-06T21:48:35.012548" level="INFO">Created student: Student8</msg>
+<arg>Created student: Student${i}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-02-06T21:48:35.012343" elapsed="0.000247"/>
+</kw>
+<var name="${i}">8</var>
+<status status="PASS" start="2024-02-06T21:48:29.020202" elapsed="5.992428"/>
+</iter>
+<iter>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-06T21:48:36.013166" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-06T21:48:35.012888" elapsed="1.000445"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:48:36.014162" level="INFO">Typing text 'estudante9' into text field 'xpath=//input[@id='id_username']'.</msg>
+<arg>${NEW_USERNAME}</arg>
+<arg>estudante${i}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:48:36.013645" elapsed="0.045796"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:48:36.059979" level="INFO">Clicking element 'xpath=/html/body/div[3]/div[4]/div/div[3]/div/section/div/form/fieldset[1]/div[2]/div[5]/div[2]/span/a[1]/span/span/em'.</msg>
+<arg>${CLEAR_PASSWORD}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:48:36.059706" elapsed="0.221914"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:48:36.282246" level="INFO">Typing text 'sandbox' into text field 'xpath=//input[@id='id_newpassword']'.</msg>
+<arg>${NEW_PASSWORD}</arg>
+<arg>sandbox</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:48:36.281948" elapsed="0.017387"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:48:36.299896" level="INFO">Typing text 'Estudante' into text field 'xpath=//input[@id='id_firstname']'.</msg>
+<arg>${FIRST_NAME}</arg>
+<arg>Estudante</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:48:36.299620" elapsed="0.020590"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:48:36.320906" level="INFO">Typing text 'Revvo' into text field 'xpath=//input[@id='id_lastname']'.</msg>
+<arg>${LAST_NAME}</arg>
+<arg>Revvo</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:48:36.320556" elapsed="0.021623"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:48:36.342799" level="INFO">Typing text 'revvo019@uorak.com' into text field 'xpath=//input[@id='id_email']'.</msg>
+<arg>${EMAIL}</arg>
+<arg>revvo01${i}@uorak.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:48:36.342491" elapsed="0.020256"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-06T21:48:37.363600" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-06T21:48:36.363161" elapsed="1.000541"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:48:37.364141" level="INFO">Executing JavaScript:
+window.scrollTo(0,2500)
+Without any arguments.</msg>
+<arg>window.scrollTo(0,2500)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-02-06T21:48:37.363867" elapsed="0.009263"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-06T21:48:38.373788" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-06T21:48:37.373397" elapsed="1.000498"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:48:38.374248" level="INFO">Clicking button 'xpath=//input[@id='id_submitbutton']'.</msg>
+<arg>${CREATE_USER}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:48:38.374057" elapsed="1.380739"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-06T21:48:40.755520" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-06T21:48:39.755110" elapsed="1.000573"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:48:40.756203" level="INFO">Clicking button 'xpath=(//button[normalize-space()='Add a new user'])[1]'.</msg>
+<arg>${ADD_NEW_USER}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:48:40.755918" elapsed="0.665559"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-02-06T21:48:41.421961" level="INFO">Created student: Student9</msg>
+<arg>Created student: Student${i}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-02-06T21:48:41.421740" elapsed="0.000270"/>
+</kw>
+<var name="${i}">9</var>
+<status status="PASS" start="2024-02-06T21:48:35.012779" elapsed="6.409280"/>
+</iter>
+<iter>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-06T21:48:42.422715" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-06T21:48:41.422347" elapsed="1.000518"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:48:42.423519" level="INFO">Typing text 'estudante10' into text field 'xpath=//input[@id='id_username']'.</msg>
+<arg>${NEW_USERNAME}</arg>
+<arg>estudante${i}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:48:42.423111" elapsed="0.044926"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:48:42.468496" level="INFO">Clicking element 'xpath=/html/body/div[3]/div[4]/div/div[3]/div/section/div/form/fieldset[1]/div[2]/div[5]/div[2]/span/a[1]/span/span/em'.</msg>
+<arg>${CLEAR_PASSWORD}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:48:42.468258" elapsed="0.226440"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:48:42.695077" level="INFO">Typing text 'sandbox' into text field 'xpath=//input[@id='id_newpassword']'.</msg>
+<arg>${NEW_PASSWORD}</arg>
+<arg>sandbox</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:48:42.694876" elapsed="0.018457"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:48:42.714235" level="INFO">Typing text 'Estudante' into text field 'xpath=//input[@id='id_firstname']'.</msg>
+<arg>${FIRST_NAME}</arg>
+<arg>Estudante</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:48:42.713763" elapsed="0.024299"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:48:42.738494" level="INFO">Typing text 'Revvo' into text field 'xpath=//input[@id='id_lastname']'.</msg>
+<arg>${LAST_NAME}</arg>
+<arg>Revvo</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:48:42.738268" elapsed="0.018025"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:48:42.756939" level="INFO">Typing text 'revvo0110@uorak.com' into text field 'xpath=//input[@id='id_email']'.</msg>
+<arg>${EMAIL}</arg>
+<arg>revvo01${i}@uorak.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:48:42.756602" elapsed="0.021904"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-06T21:48:43.779164" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-06T21:48:42.778790" elapsed="1.000560"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:48:43.780143" level="INFO">Executing JavaScript:
+window.scrollTo(0,2500)
+Without any arguments.</msg>
+<arg>window.scrollTo(0,2500)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-02-06T21:48:43.779644" elapsed="0.006807"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-06T21:48:44.787291" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-06T21:48:43.786827" elapsed="1.000609"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:48:44.787923" level="INFO">Clicking button 'xpath=//input[@id='id_submitbutton']'.</msg>
+<arg>${CREATE_USER}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:48:44.787664" elapsed="1.067393"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-06T21:48:46.855867" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-06T21:48:45.855378" elapsed="1.000768"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:48:46.856814" level="INFO">Clicking button 'xpath=(//button[normalize-space()='Add a new user'])[1]'.</msg>
+<arg>${ADD_NEW_USER}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:48:46.856517" elapsed="0.803699"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-02-06T21:48:47.660737" level="INFO">Created student: Student10</msg>
+<arg>Created student: Student${i}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-02-06T21:48:47.660491" elapsed="0.000299"/>
+</kw>
+<var name="${i}">10</var>
+<status status="PASS" start="2024-02-06T21:48:41.422251" elapsed="6.238598"/>
+</iter>
+<var>${i}</var>
+<value>1</value>
+<value>11</value>
+<status status="PASS" start="2024-02-06T21:47:44.474991" elapsed="63.185942"/>
+</for>
+<status status="PASS" start="2024-02-06T21:47:44.474616" elapsed="63.186437"/>
+</kw>
+<kw name="Then the new student will be created successfully" owner="01.ResourceBDD">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-06T21:48:51.662154" level="INFO">Slept 4 seconds.</msg>
+<arg>4s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-06T21:48:47.661839" elapsed="4.000430"/>
+</kw>
+<status status="PASS" start="2024-02-06T21:48:47.661421" elapsed="4.000947"/>
+</kw>
+<doc>Accessing the initial Moodle Sandbox page, go to the section "Site administration",
+click in "Users" to add a new user,
+all fields must be filled in
+and the new student will be created successfully.</doc>
+<tag>students</tag>
+<status status="PASS" start="2024-02-06T21:47:33.790101" elapsed="77.872431"/>
+</test>
+<kw name="Close the browser" owner="01.ResourceBDD" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-02-06T21:48:51.663429" elapsed="0.537046"/>
+</kw>
+<status status="PASS" start="2024-02-06T21:48:51.663172" elapsed="0.537461"/>
+</kw>
+<status status="PASS" start="2024-02-06T21:47:28.046365" elapsed="84.154321"/>
+</suite>
+<status status="PASS" start="2024-02-06T21:47:28.035915" elapsed="84.165581"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">students</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Testes">Testes</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="01.CreateStudentsBDD">Testes.01.CreateStudentsBDD</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

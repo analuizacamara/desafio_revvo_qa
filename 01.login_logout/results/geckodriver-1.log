@@ -1,0 +1,16 @@
+1707266486462	geckodriver	INFO	Listening on 127.0.0.1:39255
+1707266486468	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... te" "--remote-debugging-port" "37447" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileg3dftD"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1707266486874	Marionette	INFO	Marionette enabled
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1707266486981	Marionette	INFO	Listening on port 40635
+WebDriver BiDi listening on ws://127.0.0.1:37447
+Read port: 40635
+1707266487122	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: ({})
+DevTools listening on ws://127.0.0.1:37447/devtools/browser/20b33c77-74ae-405b-b273-9edb62669c07
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://sandbox.moodledemo.net."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://sandbox.moodledemo.net."
+1707266497636	Marionette	INFO	Stopped listening on port 40635

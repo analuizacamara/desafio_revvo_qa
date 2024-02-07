@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.8.10 on linux)" generated="2024-02-06T21:41:26.341343" rpa="false" schemaversion="5">
+<suite id="s1" name="Testes" source="/home/analuiza891/Documents/desafio_revvo/01.login_logout/testes">
+<suite id="s1-s1" name="01.SuccessLoginBDD" source="/home/analuiza891/Documents/desafio_revvo/01.login_logout/testes/01.SuccessLoginBDD.robot">
+<kw name="Open the browser" owner="01.ResourceBDD" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:41:26.414965" level="INFO">Opening browser 'firefox' to base url 'https://sandbox.moodledemo.net/login/index.php'.</msg>
+<arg>${URL_MOODLE}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-02-06T21:41:26.414680" elapsed="5.216635"/>
+</kw>
+<status status="PASS" start="2024-02-06T21:41:26.414211" elapsed="5.217617"/>
+</kw>
+<test id="s1-s1-t1" name="Scenario 01: Login with test user successfully" line="7">
+<kw name="Given I am on the register page in Moodle Sandbox" owner="01.ResourceBDD">
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-02-06T21:41:31.634734" elapsed="0.307167"/>
+</kw>
+<status status="PASS" start="2024-02-06T21:41:31.633911" elapsed="0.308436"/>
+</kw>
+<kw name="When valid login username is provided" owner="01.ResourceBDD">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:41:31.944705" level="INFO">Typing text 'student' into text field 'xpath=//input[@id='username']'.</msg>
+<arg>${USERNAME}</arg>
+<arg>student</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:41:31.943884" elapsed="0.074825"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-06T21:41:33.019647" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-06T21:41:32.019086" elapsed="1.000765"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:41:33.020944" level="INFO">Sending key(s) ('TAB',) to xpath=//input[@id='username'] element.</msg>
+<msg time="2024-02-06T21:41:33.298675" level="INFO">Pressing special key TAB to element.</msg>
+<msg time="2024-02-06T21:41:33.298822" level="INFO">Releasing special key TAB.</msg>
+<arg>${USERNAME}</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-02-06T21:41:33.020245" elapsed="0.289972"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-06T21:41:34.310938" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-06T21:41:33.310491" elapsed="1.000570"/>
+</kw>
+<status status="PASS" start="2024-02-06T21:41:31.943201" elapsed="2.367963"/>
+</kw>
+<kw name="And valid password is provided" owner="01.ResourceBDD">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:41:34.311928" level="INFO">Typing text 'sandbox' into text field 'xpath=//input[@id='password']'.</msg>
+<arg>${PASSWORD}</arg>
+<arg>sandbox</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:41:34.311747" elapsed="0.017597"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-06T21:41:35.330002" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-06T21:41:34.329562" elapsed="1.000563"/>
+</kw>
+<status status="PASS" start="2024-02-06T21:41:34.311466" elapsed="1.018783"/>
+</kw>
+<kw name="Then I will have successfully accessed the platform" owner="01.ResourceBDD">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:41:35.331071" level="INFO">Clicking button 'xpath=//button[@id='loginbtn']'.</msg>
+<arg>${LOGIN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:41:35.330870" elapsed="1.301403"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-06T21:41:37.632919" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-06T21:41:36.632538" elapsed="1.000557"/>
+</kw>
+<status status="PASS" start="2024-02-06T21:41:35.330569" elapsed="2.302679"/>
+</kw>
+<doc>Accessing successfully the Moodle Sandbox page, all login fields must be filled in and the user will be access the platform.</doc>
+<tag>login</tag>
+<status status="PASS" start="2024-02-06T21:41:31.632202" elapsed="6.001298"/>
+</test>
+<kw name="Close the browser" owner="01.ResourceBDD" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-02-06T21:41:37.634483" elapsed="0.655453"/>
+</kw>
+<status status="PASS" start="2024-02-06T21:41:37.634212" elapsed="0.655839"/>
+</kw>
+<status status="PASS" start="2024-02-06T21:41:26.351898" elapsed="11.938184"/>
+</suite>
+<suite id="s1-s2" name="02.FailLoginBDD" source="/home/analuiza891/Documents/desafio_revvo/01.login_logout/testes/02.FailLoginBDD.robot">
+<kw name="Open the browser" owner="02.ResourceBDD" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:41:38.293787" level="INFO">Opening browser 'firefox' to base url 'https://sandbox.moodledemo.net/login/index.php'.</msg>
+<arg>${URL_MOODLE}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-02-06T21:41:38.293621" elapsed="5.234614"/>
+</kw>
+<status status="PASS" start="2024-02-06T21:41:38.293443" elapsed="5.235238"/>
+</kw>
+<test id="s1-s2-t1" name="Scenario 01: Login with new user failed" line="7">
+<kw name="Given I am on the register page in Moodle Sandbox" owner="02.ResourceBDD">
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-02-06T21:41:43.531130" elapsed="0.317657"/>
+</kw>
+<status status="PASS" start="2024-02-06T21:41:43.530531" elapsed="0.318531"/>
+</kw>
+<kw name="When invalid login username is provided" owner="02.ResourceBDD">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:41:43.851648" level="INFO">Typing text 'students' into text field 'xpath=//input[@id='username']'.</msg>
+<arg>${USERNAME}</arg>
+<arg>students</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:41:43.851026" elapsed="0.071537"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-06T21:41:44.923481" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-06T21:41:43.922887" elapsed="1.000837"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:41:44.924801" level="INFO">Sending key(s) ('TAB',) to xpath=//input[@id='username'] element.</msg>
+<msg time="2024-02-06T21:41:45.195585" level="INFO">Pressing special key TAB to element.</msg>
+<msg time="2024-02-06T21:41:45.195738" level="INFO">Releasing special key TAB.</msg>
+<arg>${USERNAME}</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-02-06T21:41:44.924142" elapsed="0.285550"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-06T21:41:46.210671" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-06T21:41:45.210147" elapsed="1.000725"/>
+</kw>
+<status status="PASS" start="2024-02-06T21:41:43.850202" elapsed="2.360873"/>
+</kw>
+<kw name="And invalid password is provided" owner="02.ResourceBDD">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:41:46.212460" level="INFO">Typing text 'sand_box' into text field 'xpath=//input[@id='password']'.</msg>
+<arg>${PASSWORD}</arg>
+<arg>sand_box</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:41:46.212107" elapsed="0.025518"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-06T21:41:47.238249" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-06T21:41:46.237857" elapsed="1.000496"/>
+</kw>
+<status status="PASS" start="2024-02-06T21:41:46.211612" elapsed="1.026835"/>
+</kw>
+<kw name="Then the accessed to the platform failed" owner="02.ResourceBDD">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:41:47.239080" level="INFO">Clicking button 'xpath=//button[@id='loginbtn']'.</msg>
+<arg>${LOGIN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:41:47.238917" elapsed="0.816016"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-06T21:41:49.055564" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-06T21:41:48.055190" elapsed="1.000551"/>
+</kw>
+<status status="PASS" start="2024-02-06T21:41:47.238678" elapsed="1.817211"/>
+</kw>
+<doc>Accessing successfully the Moodle Sandbox page, all login fields must be filled with invalid data
+and the user will not be access the platform.</doc>
+<tag>login</tag>
+<status status="PASS" start="2024-02-06T21:41:43.528998" elapsed="5.527126"/>
+</test>
+<kw name="Close the browser" owner="02.ResourceBDD" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-02-06T21:41:49.057144" elapsed="0.626765"/>
+</kw>
+<status status="PASS" start="2024-02-06T21:41:49.056855" elapsed="0.627250"/>
+</kw>
+<status status="PASS" start="2024-02-06T21:41:38.290592" elapsed="11.393582"/>
+</suite>
+<suite id="s1-s3" name="03.LogoutBDD" source="/home/analuiza891/Documents/desafio_revvo/01.login_logout/testes/03.LogoutBDD.robot">
+<kw name="Open the browser" owner="03.ResourceBDD" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:41:49.692494" level="INFO">Opening browser 'firefox' to base url 'https://sandbox.moodledemo.net/login/index.php'.</msg>
+<arg>${URL_MOODLE}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-02-06T21:41:49.692116" elapsed="5.359037"/>
+</kw>
+<status status="PASS" start="2024-02-06T21:41:49.691739" elapsed="5.359930"/>
+</kw>
+<test id="s1-s3-t1" name="Scenario 01: Logout with test user successfully" line="7">
+<kw name="Given I am on the register page in Moodle Sandbox" owner="03.ResourceBDD">
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-02-06T21:41:55.054094" elapsed="0.280708"/>
+</kw>
+<status status="PASS" start="2024-02-06T21:41:55.053508" elapsed="0.281785"/>
+</kw>
+<kw name="When valid access data is provided" owner="03.ResourceBDD">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:41:55.337062" level="INFO">Typing text 'student' into text field 'xpath=//input[@id='username']'.</msg>
+<arg>${USERNAME}</arg>
+<arg>student</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:41:55.336616" elapsed="0.080923"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-06T21:41:56.419393" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-06T21:41:55.418190" elapsed="1.001358"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:41:56.420306" level="INFO">Sending key(s) ('TAB',) to xpath=//input[@id='username'] element.</msg>
+<msg time="2024-02-06T21:41:56.714098" level="INFO">Pressing special key TAB to element.</msg>
+<msg time="2024-02-06T21:41:56.714205" level="INFO">Releasing special key TAB.</msg>
+<arg>${USERNAME}</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-02-06T21:41:56.419809" elapsed="0.308163"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-06T21:41:57.728762" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-06T21:41:56.728248" elapsed="1.000829"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:41:57.729917" level="INFO">Typing text 'sandbox' into text field 'xpath=//input[@id='password']'.</msg>
+<arg>${PASSWORD}</arg>
+<arg>sandbox</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:41:57.729464" elapsed="0.024880"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-06T21:41:58.755401" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-06T21:41:57.754759" elapsed="1.000815"/>
+</kw>
+<status status="PASS" start="2024-02-06T21:41:55.336024" elapsed="3.419684"/>
+</kw>
+<kw name="And the access to the platform was successfully" owner="03.ResourceBDD">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:41:58.756572" level="INFO">Clicking button 'xpath=//button[@id='loginbtn']'.</msg>
+<arg>${LOGIN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:41:58.756361" elapsed="3.748273"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-06T21:42:03.505486" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-06T21:42:02.504974" elapsed="1.000654"/>
+</kw>
+<status status="PASS" start="2024-02-06T21:41:58.756052" elapsed="4.749696"/>
+</kw>
+<kw name="Then I will do logout in the platform" owner="03.ResourceBDD">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:42:03.506525" level="INFO">Clicking element 'xpath=//a[@id='user-menu-toggle']'.</msg>
+<arg>${PROFILE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:42:03.506330" elapsed="0.226349"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-06T21:42:04.733426" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-06T21:42:03.732880" elapsed="1.000700"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-06T21:42:04.734028" level="INFO">Clicking element 'xpath=//a[@role='menuitem'][normalize-space()='Log out']'.</msg>
+<arg>${LOGOUT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-06T21:42:04.733790" elapsed="0.883314"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-06T21:42:08.617920" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-06T21:42:05.617537" elapsed="3.000527"/>
+</kw>
+<status status="PASS" start="2024-02-06T21:42:03.506062" elapsed="5.112137"/>
+</kw>
+<doc>Accessing successfully the Moodle Sandbox page, all login fields must be filled in, the user will be access
+and the user will do logout the platform.</doc>
+<tag>logout</tag>
+<status status="PASS" start="2024-02-06T21:41:55.051982" elapsed="13.566440"/>
+</test>
+<kw name="Close the browser" owner="03.ResourceBDD" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-02-06T21:42:08.619196" elapsed="0.536965"/>
+</kw>
+<status status="PASS" start="2024-02-06T21:42:08.618961" elapsed="0.537363"/>
+</kw>
+<status status="PASS" start="2024-02-06T21:41:49.685131" elapsed="19.471244"/>
+</suite>
+<status status="PASS" start="2024-02-06T21:41:26.342050" elapsed="42.815161"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="2" fail="0" skip="0">login</stat>
+<stat pass="1" fail="0" skip="0">logout</stat>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="Testes">Testes</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="01.SuccessLoginBDD">Testes.01.SuccessLoginBDD</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s2" name="02.FailLoginBDD">Testes.02.FailLoginBDD</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s3" name="03.LogoutBDD">Testes.03.LogoutBDD</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

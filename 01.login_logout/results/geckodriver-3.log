@@ -1,0 +1,21 @@
+1707266509729	geckodriver	INFO	Listening on 127.0.0.1:50431
+1707266509745	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/usr ... te" "--remote-debugging-port" "33713" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileAhWsXd"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1707266510178	Marionette	INFO	Marionette enabled
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1707266510256	Marionette	INFO	Listening on port 34421
+WebDriver BiDi listening on ws://127.0.0.1:33713
+Read port: 34421
+1707266510401	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: ({})
+DevTools listening on ws://127.0.0.1:33713/devtools/browser/96cc690c-9d7b-45a1-b457-43675fb58b68
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://sandbox.moodledemo.net."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://sandbox.moodledemo.net."
+1707266528620	Marionette	INFO	Stopped listening on port 34421
+JavaScript warning: https://sandbox.moodledemo.net/lib/javascript.php/1707260549/lib/jquery/jquery-3.7.1.min.js, line 2: Script terminated by timeout at:
+dispatch@https://sandbox.moodledemo.net/lib/javascript.php/1707260549/lib/jquery/jquery-3.7.1.min.js:2:39414
+add/v.handle@https://sandbox.moodledemo.net/lib/javascript.php/1707260549/lib/jquery/jquery-3.7.1.min.js:2:38006
+
+[145872] Sandbox: Unexpected EOF, op 0 flags 00 path /proc/cpuinfo
